@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .block {
+            position: relative;
+            width: calc(33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .block .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 0 0 10px 10px;
+            transition: opacity 0.3s;
+        }
+
+        .block:hover {
+            transform: translateY(-5px);
+        }
+
+        .block:hover .description {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .block {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .block {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Puzzle Visualization</h1>
+
+    <div class="container">
+        <a style="text-decoration:none" href="https://visualgo.net/en/array" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Insertion Of An Array.jpg" alt="Puzzle 1">
+            <div class="description">Insertion Of An Array
+            </div>
+        </a>
+        <a style="text-decoration:none" href="https://visualgo.net/en/sorting" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Sorting.jpg" alt="Puzzle 2">
+            <div class="description">Sorting</div>
+        </a>
+        <a style="text-decoration:none" href="https://visualgo.net/en/list" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Insertion of a linked list.jpg" alt="Puzzle 3">
+
+            <div class="description">Insertion of a linked list</div>
+        </a>
+        <a style="text-decoration:none" href="https://visualgo.net/en/list" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Deletion In a linked list.jpg" alt="Puzzle 4">
+            <div class="description">Deletion In a linked list</div>
+        </a>
+        <a style="text-decoration:none" href="https://visualgo.net/en/array" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Search In an array.jpg" alt="Puzzle 5">
+            <div class="description">Search in an array</div>
+        </a>
+        <a style="text-decoration:none" href="https://takeuforward.org/data-structure/reverse-a-string/" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\ReverseString.jpg" alt="Puzzle 6">
+            <div class="description">Reverse String</div>
+        </a>
+
+        <a style="text-decoration:none;"
+            href="https://math.stackexchange.com/questions/1383150/visualizing-the-factorial" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Factorial.jpg" alt="Puzzle 7">
+            <div class="description" style="margin-top: 10px;">Factorial </div>
+        </a>
+
+        <a style="text-decoration:none" href="https://favtutor.com/blogs/count-vowels-string" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Number Of Vowels.jpg" alt="Puzzle 8">
+            <div class="description">Number Of Vowels</div>
+        </a>
+        <a style="text-decoration:none"
+            href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-17.php" class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Sum Of values in an array.jpg" alt="Puzzle 9">
+            <div class="description">Sum Of Values in an array</div>
+        </a>
+        <a style="text-decoration:none" href="https://www.geeksforgeeks.org/maximum-of-two-numbers-in-python/"
+            class="block">
+            <img src="C:\Users\gvpra\Downloads\HackathonProject\Max Of two numbers .jpg" alt="Puzzle 10">
+            <div class="description">Max Of Two Numbers</div>
+        </a>
+    </div>
+    <footer
+        style="color: #f8f9fa; padding: 50px; text-align: center; font-family: Arial, sans-serif; border-top: 1px solid #ddd;">
+        <p>
+            Made By: <em>G V Pranav Sharma</a></em>, <em>MD Sakib</em>, <em>P V Adhwaidh</em> and <em>Chirag</em>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
