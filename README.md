@@ -1,5 +1,5 @@
 # Coding Puzzles
-Coding Puzzles — a revolutionary platform for coding enthusiasts, problem solvers, and anyone eager to unlock the mysteries of efficient programming.
+A revolutionary platform for coding enthusiasts, problem solvers, and anyone eager to unlock the mysteries of efficient programming.
 "Coding Puzzles isn’t just a tool; it’s a teacher. We offer:  
 - *Interactive visualizations* that simplify complex algorithms.  
 - *Beginner-friendly articles* that break down coding puzzles into easy-to-understand concepts.  
