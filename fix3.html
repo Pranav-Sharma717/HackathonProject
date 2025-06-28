@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Puzzles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            color: #333;
+            line-height: 2.5;
+        }
+
+        h1 {
+            text-align: left;
+            color: white;
+            font-size: 2.5em;
+            padding-inline: 20px;
+            border-radius: 3px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        #problemSelector {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto 20px auto;
+            display: block;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+        }
+
+        .editor {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .output {
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        #problemTitle {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        #problemDescription {
+            text-align: center;
+            font-size: 1em;
+            margin: 10px auto;
+            max-width: 600px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1><b>Coding Puzzle</b></h1>
+    </div>
+
+    <h2>Select a Puzzle</h2>
+    <select id="problemSelector" onchange="loadProblem()">
+        <option value="" disabled selected>Select a problem...</option>
+        <option value="insertArray">1. Insert into an Array</option>
+        <option value="sortArray">2. Sort an Array</option>
+        <option value="insertLinkedList">3. Insert into a Linked List</option>
+        <option value="deleteLinkedList">4. Delete from a Linked List</option>
+        <option value="searchArray">5. Search in an Array</option>
+        <option value="reverseString">6. Reverse a String</option>
+        <option value="factorial">7. Calculate Factorial</option>
+        <option value="countVowels">8. Count Vowels in a String</option>
+        <option value="sumArray">9. Sum of Values in an Array</option>
+        <option value="maxNumbers">10. Find Maximum in Numbers</option>
+    </select>
+
+    <h3 id="problemTitle"></h3>
+    <p id="problemDescription"></p>
+
+    <div class="editor">
+        <textarea id="codeEditor" placeholder="Write your JavaScript code here..."></textarea>
+        <br>
+        <button onclick="runCode()">Run Code</button>
+    </div>
+
+    <div class="output" id="output">
+        <p>Output will appear here...</p>
+    </div>
+
+    <script>
+        const problems = {
+            insertArray: {
+                title: "Puzzle 1: Insert into an Array",
+                description: "Write a function that inserts a value at a specified position in an array.",
+                testInput: { array: [1, 2, 3], value: 4, position: 2 },
+                expectedOutput: [1, 2, 4, 3],
+                exampleSolution: `function insertArray({ array, value, position }) {
+                const newArray = [...array]; // Create a copy of the original array
+                newArray.splice(position, 0, value); // Insert the value at the specified position
+                return newArray;
+                }`
+
+            },
+            sortArray: {
+                title: "Puzzle 2: Sort an Array",
+                description: "Write a function to sort an array in ascending order.",
+                testInput: [3, 1, 4, 2],
+                expectedOutput: [1, 2, 3, 4],
+                exampleSolution: `function sortArray(array) {\n return array.sort((a,b) => a-b);\n}`
+            },
+            insertLinkedList: {
+                title: "Puzzle 3: Insert into a Linked List",
+                description: "Write a function to insert a node into a linked list at a specified position.",
+                testInput: { list: [1, 2, 3], value: 4, position: 2 },
+                expectedOutput: [1, 2, 4, 3],
+                exampleSolution: `function insertLinkedList({ list, value, position }) {\n    let newNode = { value, next: null };\n    if (position === 0) {\n        newNode.next = list;\n        return newNode;\n    }\n    let current = list;\n    for (let i = 0; i < position - 1; i++) {\n        current = current.next;\n    }\n    newNode.next = current.next;\n    current.next = newNode;\n    return list;\n}`
+            },
+            deleteLinkedList: {
+                title: "Puzzle 4: Delete from a Linked List",
+                description: "Write a function to delete a node from a linked list by its value.",
+                testInput: { list: [1, 2, 3], value: 2 },
+                expectedOutput: [1, 3]
+            },
+            searchArray: {
+                title: "Puzzle 5: Search in an Array",
+                description: "Write a function to search for an element in an array and return its index.",
+                testInput: { array: [1, 2, 3, 4], value: 3 },
+                expectedOutput: 2,
+                exampleSolution: `function searchArray({ array, value }) {\n    return array.indexOf(value);\n}`
+            },
+            reverseString: {
+                title: "Puzzle 6: Reverse a String",
+                description: "Write a function to reverse a string.",
+                testInput: "hello",
+                expectedOutput: "olleh",
+                exampleSolution: `function reverseString(input) {\n  return input.split('').reverse().join('');\n}`
+            },
+            factorial: {
+                title: "Puzzle 7: Calculate Factorial",
+                description: "Write a function to calculate the factorial of a number.",
+                testInput: 5,
+                expectedOutput: 120,
+                exampleSolution: `function factorial(n) {\n    if (n === 0) return 1;\n    return n * factorial(n - 1);\n}`
+            },
+            countVowels: {
+                title: "Puzzle 8: Count Vowels in a String",
+                description: "Write a function to count the number of vowels in a string.",
+                testInput: "hello world",
+                expectedOutput: 3,
+                exampleSolution: `function countVowels(str) {\n    return (str.match(/[aeiou]/gi) || []).length;\n}`
+            },
+            sumArray: {
+                title: "Puzzle 9: Sum of Values in an Array",
+                description: "Write a function to calculate the sum of values in an array.",
+                testInput: [1, 2, 3, 4],
+                expectedOutput: 10,
+                exampleSolution: `function sumArray(arr) {\n    return arr.reduce((acc, val) => acc + val, 0);\n}`
+            },
+            maxNumbers: {
+                title: "Puzzle 10: Find Maximum in Numbers",
+                description: "Write a function to find the maximum value in a list of numbers.",
+                testInput: [5, 10],
+                expectedOutput: 10,
+                exampleSolution: `function maxNumbers(a, b) {\n    return a > b ? a : b;\n}`
+            }
+        };
+
+        let currentProblem = null;
+
+        function loadProblem() {
+            const selectedProblemKey = document.getElementById("problemSelector").value;
+            currentProblem = problems[selectedProblemKey];
+
+            document.getElementById("problemTitle").innerText = currentProblem.title;
+            document.getElementById("problemDescription").innerText = `${currentProblem.description}\n\nExample Solution:\n${currentProblem.exampleSolution}`;
+            document.getElementById("codeEditor").value = '';
+            document.getElementById("output").innerHTML = '<p>Output will appear here...</p>';
+        }
+
+        function runCode() {
+            if (!currentProblem) {
+                alert("Please select a problem first!");
+                return;
+            }
+
+            const userCode = document.getElementById("codeEditor").value;
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = '';
+
+            try {
+                const userFunction = new Function('input', userCode + `\nreturn ${Object.keys(problems).find(key => problems[key] === currentProblem)}(input);`);
+                const result = userFunction(currentProblem.testInput);
+
+                if (JSON.stringify(result) === JSON.stringify(currentProblem.expectedOutput)) {
+                    outputDiv.innerHTML = `<p class="success">Success! Your function returned the correct result: ${JSON.stringify(result)}</p>`;
+                } else {
+                    outputDiv.innerHTML = `<p class="error">Incorrect. Expected: ${JSON.stringify(currentProblem.expectedOutput)}, but got: ${JSON.stringify(result)}</p>`;
+                }
+            } catch (error) {
+                outputDiv.innerHTML = `<p class="error">Error in your code: ${error.message}</p>`;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
