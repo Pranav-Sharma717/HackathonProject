@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -424,4 +425,432 @@
     </footer>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Puzzles</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            color: #fff;
+            margin-left: 15;
+            transition: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 36, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0ff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 0, 36, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #0ff;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #about,
+        #learn {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h3 {
+            color: #0ff;
+        }
+
+        p {
+            color: #ddd;
+            line-height: 1.8;
+        }
+
+        /* Learn Section Content */
+        .learn-content ul {
+            padding-left: 20px;
+        }
+
+        .learn-content li {
+            margin: 10px 0;
+        }
+
+        /* Puzzle Section */
+        #puzzle-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .editor {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        textarea {
+            width: 90%;
+            max-width: 800px;
+            height: 250px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .output {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 800px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #problemTitle {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        #problemDescription {
+            text-align: center;
+            font-size: 1em;
+            margin: 10px auto;
+            max-width: 600px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Coding Puzzles</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#learn">Learn</a>
+            <a href="#puzzle-section">Puzzles</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            Welcome to Coding Puzzles, the ultimate platform for learning coding through fun and challenging puzzles.
+            Whether you're a beginner or an advanced programmer, our puzzles will help you improve your problem-solving
+            skills and build confidence in coding.
+        </p>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn">
+        <h2>Learn</h2>
+        <div class="learn-content">
+            <p>Before diving into the puzzles, here’s some theoretical knowledge to help you:</p>
+            <ul>
+                <li><b>Arrays:</b> Arrays are a collection of elements stored in contiguous memory locations.</li>
+                <li><b>Linked Lists:</b> Linked lists are dynamic data structures consisting of nodes connected by
+                    pointers.</li>
+                <li><b>Strings:</b> Strings are sequences of characters used to store text.</li>
+                <li><b>Sorting:</b> Sorting algorithms arrange elements in a specific order, such as ascending or
+                    descending.</li>
+                <li><b>Recursion:</b> Recursion is a technique where a function calls itself to solve a problem.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Puzzle Section -->
+    <section id="puzzle-section">
+        <div id="puzzles" style="padding: 20px;">
+            <h2>Puzzles</h2>
+            <div>
+                <label for="problemSelector" style="font-weight: bold; color: white;">Select a Puzzle:</label>
+                <select id="problemSelector" onchange="loadProblem()"
+                    style="width: 100%; max-width: 300px; margin: 10px 0; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;">
+                    <option value="" disabled selected>Select a problem...</option>
+                    <option value="insertArray">1. Insert into an Array</option>
+                    <option value="sortArray">2. Sort an Array</option>
+                    <option value="insertLinkedList">3. Insert into a Linked List</option>
+                    <option value="deleteLinkedList">4. Delete from a Linked List</option>
+                    <option value="searchArray">5. Search in an Array</option>
+                    <option value="reverseString">6. Reverse a String</option>
+                    <option value="factorial">7. Calculate Factorial</option>
+                    <option value="countVowels">8. Count Vowels in a String</option>
+                    <option value="sumArray">9. Sum of Values in an Array</option>
+                    <option value="maxNumbers">10. Find Maximum in Numbers</option>
+                </select>
+            </div>
+
+            <!-- Problem Title -->
+            <div id="problemTitleBox"
+                style="margin: 20px 0; background-color: #e9ecef; padding: 15px; border-radius: 5px; text-align: center; font-size: 1.5em; color: #333; display: none;">
+                <b>Problem Title</b>
+            </div>
+
+            <!-- Problem Description -->
+            <div id="problemDescriptionBox"
+                style="margin: 20px 0; padding: 15px; border-radius: 5px; background-color: #f0f8ff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); display: none;">
+                <p id="problemInstruction" style="font-size: 1em; color: #333; margin-bottom: 10px;">
+                    Problem description and instructions will appear here.
+                </p>
+                <pre id="exampleCode"
+                    style="background-color: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 5px; font-family: 'Courier New', monospace; overflow-x: auto;">
+        // Example code will appear here
+                </pre>
+            </div>
+
+            <!-- Code Editor -->
+            <div class="editor" style="margin-top: 20px;">
+                <textarea id="codeEditor" placeholder="Write your JavaScript code here..."
+                    style="width: 100%; max-width: 800px; height: 200px; font-family: monospace; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; background-color: white; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"></textarea>
+
+                <button onclick="runCode()">Run Code</button>
+                <a href="Visualize.html"><button>Click to Visualize</button></a>
+            </div>
+
+            <!-- Output -->
+            <div class="output" id="output"
+                style="margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto; padding: 15px; border-radius: 5px; background-color: #f8f9fa; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <p>Output will appear here...</p>
+            </div>
+        </div>
+        <script>
+            const problems = {
+                insertArray: {
+                    title: "Puzzle 1: Insert into an Array",
+                    description: "Write a function that inserts a value at a specified position in an array.",
+                    testInput: { array: [1, 2, 3], value: 4, position: 2 },
+                    expectedOutput: [1, 2, 4, 3],
+                    exampleSolution: `function insertArray({ array, value, position }) {
+                    const newArray = [...array]; // Create a copy of the original array
+                    newArray.splice(position, 0, value); // Insert the value at the specified position
+                    return newArray;
+                    }`
+
+                },
+                sortArray: {
+                    title: "Puzzle 2: Sort an Array",
+                    description: "Write a function to sort an array in ascending order.",
+                    testInput: [3, 1, 4, 2],
+                    expectedOutput: [1, 2, 3, 4],
+                    exampleSolution: `function sortArray(array) {\n return array.sort((a,b) => a-b);\n}`
+                },
+                insertLinkedList: {
+                    title: "Puzzle 3: Insert into a Linked List",
+                    description: "Write a function to insert a node into a linked list at a specified position.",
+                    testInput: { list: [1, 2, 3], value: 4, position: 2 },
+                    expectedOutput: [1, 2, 4, 3],
+                    exampleSolution: `function insertLinkedList({ list, value, position }) {\n    let newNode = { value, next: null };\n    if (position === 0) {\n        newNode.next = list;\n        return newNode;\n    }\n    let current = list;\n    for (let i = 0; i < position - 1; i++) {\n        current = current.next;\n    }\n    newNode.next = current.next;\n    current.next = newNode;\n    return list;\n}`
+                },
+                deleteLinkedList: {
+                    title: "Puzzle 4: Delete from a Linked List",
+                    description: "Write a function to delete a node from a linked list by its value.",
+                    testInput: { list: [1, 2, 3], value: 2 },
+                    expectedOutput: [1, 3]
+                },
+                searchArray: {
+                    title: "Puzzle 5: Search in an Array",
+                    description: "Write a function to search for an element in an array and return its index.",
+                    testInput: { array: [1, 2, 3, 4], value: 3 },
+                    expectedOutput: 2,
+                    exampleSolution: `function searchArray({ array, value }) {\n    return array.indexOf(value);\n}`
+                },
+                reverseString: {
+                    title: "Puzzle 6: Reverse a String",
+                    description: "Write a function to reverse a string.",
+                    testInput: "hello",
+                    expectedOutput: "olleh",
+                    exampleSolution: `function reverseString(input) {\n  return input.split('').reverse().join('');\n}`
+                },
+                factorial: {
+                    title: "Puzzle 7: Calculate Factorial",
+                    description: "Write a function to calculate the factorial of a number.",
+                    testInput: 5,
+                    expectedOutput: 120,
+                    exampleSolution: `function factorial(n) {\n    if (n === 0) return 1;\n    return n * factorial(n - 1);\n}`
+                },
+                countVowels: {
+                    title: "Puzzle 8: Count Vowels in a String",
+                    description: "Write a function to count the number of vowels in a string.",
+                    testInput: "hello world",
+                    expectedOutput: 3,
+                    exampleSolution: `function countVowels(str) {\n    return (str.match(/[aeiou]/gi) || []).length;\n}`
+                },
+                sumArray: {
+                    title: "Puzzle 9: Sum of Values in an Array",
+                    description: "Write a function to calculate the sum of values in an array.",
+                    testInput: [1, 2, 3, 4],
+                    expectedOutput: 10,
+                    exampleSolution: `function sumArray(arr) {\n    return arr.reduce((acc, val) => acc + val, 0);\n}`
+                },
+                maxNumbers: {
+                    title: "Puzzle 10: Find Maximum in Numbers",
+                    description: "Write a function to find the maximum value in a list of numbers.",
+                    testInput: [5, 10],
+                    expectedOutput: 10,
+                    exampleSolution: `function maxNumbers(a, b) {\n    return a > b ? a : b;\n}`
+                }
+            };
+
+            let currentProblem = null;
+
+            function loadProblem() {
+                const selectedProblemKey = document.getElementById("problemSelector").value;
+                currentProblem = problems[selectedProblemKey];
+
+                document.getElementById("problemTitle").innerText = currentProblem.title;
+                document.getElementById("problemDescription").innerText = `${currentProblem.description}\n\nExample Solution:\n${currentProblem.exampleSolution}`;
+                document.getElementById("codeEditor").value = '';
+                document.getElementById("output").innerHTML = '<p>Output will appear here...</p>';
+            }
+
+            function runCode() {
+                if (!currentProblem) {
+                    alert("Please select a problem first!");
+                    return;
+                }
+
+                const userCode = document.getElementById("codeEditor").value;
+                const outputDiv = document.getElementById("output");
+                outputDiv.innerHTML = '';
+
+                try {
+                    const userFunction = new Function('input', userCode + `\nreturn ${Object.keys(problems).find(key => problems[key] === currentProblem)}(input);`);
+                    const result = userFunction(currentProblem.testInput);
+
+                    if (JSON.stringify(result) === JSON.stringify(currentProblem.expectedOutput)) {
+                        outputDiv.innerHTML = `<p class="success">Success! Your function returned the correct result: ${JSON.stringify(result)}</p>`;
+                    } else {
+                        outputDiv.innerHTML = `<p class="error">Incorrect. Expected: ${JSON.stringify(currentProblem.expectedOutput)}, but got: ${JSON.stringify(result)}</p>`;
+                    }
+                } catch (error) {
+                    outputDiv.innerHTML = `<p class="error">Error in your code: ${error.message}</p>`;
+                }
+            }
+            function loadProblem() {
+                const selectedProblemKey = document.getElementById("problemSelector").value;
+                currentProblem = problems[selectedProblemKey];
+
+                // Display the title
+                document.getElementById("problemTitleBox").style.display = "block";
+                document.getElementById("problemTitleBox").innerText = currentProblem.title;
+
+                // Display the description and example code
+                document.getElementById("problemDescriptionBox").style.display = "block";
+                document.getElementById("problemInstruction").innerText = currentProblem.description;
+                document.getElementById("exampleCode").innerText = `function example(input) {// Your example code logic here}
+                example(${JSON.stringify(currentProblem.testInput)})`;
+
+
+                // Clear the editor and output box
+                document.getElementById("codeEditor").value = '';
+                document.getElementById("output").innerHTML = '<p>Output will appear here...</p>';
+            }
+
+        </script>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="mailto:support@example.com">Email Us</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+    </footer>
+</body>
+
+>>>>>>> 2d362e48199d5a833983f8b44121d06a231b8f7c
 </html>
